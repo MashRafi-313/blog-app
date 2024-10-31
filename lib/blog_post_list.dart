@@ -19,7 +19,7 @@ class BlogPostList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Blog posts"),
+        title: const Text("Write Your Own Daily blog",style: TextStyle(fontWeight: FontWeight.w700),),
         elevation: 0.0,
       ),
       floatingActionButton: FloatingActionButton(
@@ -85,6 +85,10 @@ class BlogPostList extends StatelessWidget {
                             ),
                             Text(
                               formatDate(blogPost.publishDate),
+                              style: const TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              blogPost.content,
                               style: const TextStyle(color: Colors.white),
                             )
                           ],
